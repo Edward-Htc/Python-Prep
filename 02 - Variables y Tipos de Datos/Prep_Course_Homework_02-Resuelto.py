@@ -33,7 +33,7 @@ type(a)
 # In[2]:
 
 
-mi_nombre = 'juan carlos perez'
+mi_nombre = 'edward huarcaya tacas'
 
 
 # 5) Crear una variable que contenga un número complejo
@@ -67,7 +67,7 @@ pi = 3.1416
 
 var1 = 'True'
 var2 = True
-
+var1 == var2
 
 # 9) Imprimir el tipo de dato correspondientes a las variables creadas en el punto 9
 
