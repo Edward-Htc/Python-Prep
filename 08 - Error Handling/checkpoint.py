@@ -13,9 +13,9 @@ def Factorial(numero):
     '''
     #Tu código aca:
     if(type(numero) != int):
-        return "El dato debe de ser de tipo entero"
+        return None
     if(numero <= 0):
-        return "El numero debe de ser positivo mayor a cero"
+        return None
     if(numero > 1):
         numero = numero * Factorial(numero-1)
     return numero
