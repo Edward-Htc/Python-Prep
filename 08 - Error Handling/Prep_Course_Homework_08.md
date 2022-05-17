@@ -1,7 +1,7 @@
 ## Manejo de errores
 
 1) Con la clase creada en el módulo 7, tener en cuenta diferentes casos en que el código pudiera arrojar error. Por ejemplo, en la creación del objeto recibimos una lista de números enteros pero ¿qué pasa si se envía otro tipo de dato?
-
+``` python
     from Metodos import *
     m = Metodos('hola')
 
@@ -18,12 +18,12 @@
         10         self.lista = lista
 
     ValueError: El valor ingresado no es de tipo 'List' 
-
+``` 
 2) En la función que hace la conversión de grados, validar que los parámetros enviados sean los esperados, de no serlo, informar cuáles son los valores esperados.
-
+``` python
     m1 = Metodos([2,3,5,6,2])
     m1.lista_Conversion_grados(1,2)
-
+```
 
 3) Importar el modulo "unittest" y crear los siguientes casos de pruebas sobre la clase utilizada en el punto 2<br>
 Creacion del objeto incorrecta<br>
@@ -31,7 +31,7 @@ Creacion correcta del objeto<br>
 Metodo valor_modal()<br>
 
 Se puede usar "raise ValueError()" en la creación de la clase para verificar el error. Investigar sobre esta funcionalidad.
-
+``` python
     import unittest
     class ProbandoMiClase(unittest.TestCase):
     
@@ -51,13 +51,13 @@ Se puede usar "raise ValueError()" en la creación de la clase para verificar el
         moda = h1.encontrarMayorRepetido(False)
         resultado = "el numero que mas se repite es el "+str(1)+" con "+str(2)+" repeticiones"
         self.assertEqual(moda, resultado)
-
+```
 4) Probar una creación incorrecta y visualizar la salida del "raise"
 
     h2 = Metodos('algo')
 
 6) Agregar casos de pruebas para el método verifica_primos() realizando el cambio en la clase, para que devuelva una lista de True o False en función de que el elemento en la posisicón sea o no primo
-
+``` python
     class ProbandoMiClase2(unittest.TestCase):
 
     def test_verifica_primos1(self):
@@ -68,9 +68,9 @@ Se puede usar "raise ValueError()" en la creación de la clase para verificar el
         self.assertEqual(primos, primos_esperado)
     
     unittest.main(argv=[''], verbosity=2, exit=False)
-
+```
 7) Agregar casos de pruebas para el método conversion_grados()
-
+``` python
     class ProbandoMiClase3(unittest.TestCase):
         def test_verifica_conversion1(self):
             lis = [2,3,8,10,13]
@@ -78,9 +78,9 @@ Se puede usar "raise ValueError()" en la creación de la clase para verificar el
             grados = h1.lista_Conversion_grados('celsius','farenheit')
             grados_esperado = [35.6, 37.4, 46.4, 50.0, 55.4]
             self.assertEqual(grados, grados_esperado)
-
+```
 8) Agregar casos de pruebas para el método factorial()
-
+``` python
     class ProbandoMiClase4(unittest.TestCase):
 
         def test_verifica_factorial(self):
@@ -89,6 +89,6 @@ Se puede usar "raise ValueError()" en la creación de la clase para verificar el
             factorial = h1.lista_Factorial()
             factorial_esperado = [2, 6, 40320, 3628800, 6227020800]
             self.assertEqual(factorial, factorial_esperado)
-
+```
 9) Completar el código en las funciones del archivo "checkpoint.py" y probarlo a partir de la ejecución del script "tests.py"
     

@@ -5,17 +5,17 @@ Color<br>
 Si es moto, auto, camioneta ó camión<br>
 Cilindrada del motor
 
-    class Vehiculo:
+  ``` python  class Vehiculo:
         def __init__(self,color,tipo,cilindrada):
             self.color = color
             self.tipo = tipo
             self.cilindrada = cilindrada
-
+```
 2) A la clase Vehiculo creada en el punto 1, agregar los siguientes métodos:<br>
 Acelerar<br>
 Frenar<br>
 Doblar<br>
-
+``` python
     class Vehiculo:
     def __init__(self,color,tipo,cilindrada):
         self.color=color
@@ -30,10 +30,10 @@ Doblar<br>
         self.velocidad-=vel
     def doblar(self,grado):
         self.direccion += grado
-
+```
 
 3) Instanciar 3 objetos de la clase vehículo y ejecutar sus métodos, probar luego el resultado
-
+``` python
     v1 = Vehiculo('amarillo','auto',3)
     v2 = Vehiculo('rojo','moto',1)
     v3 = Vehiculo('rojo','camioneta',5)
@@ -47,9 +47,9 @@ Doblar<br>
     v1.doblar(2)
     v2.doblar(1)
     v3.doblar(3)
-
+```
 4) Agregar a la clase Vehiculo, un método que muestre su estado, es decir, a que velocidad se encuentra y su dirección. Y otro método que muestre color, tipo y cilindrada
-
+``` python
     class Vehiculo:
     def __init__(self,color,tipo,cilindrada):
         self.color=color
@@ -75,13 +75,13 @@ v1.detalles()
 v1.estado()
 v1.acelerar(30)
 v1.estado()
-
+```
 5) Crear una clase que permita utilizar las funciones creadas en la práctica del módulo 6<br>
 Verificar Primo<br>
 Valor modal<br>
 Conversión grados<br>
 Factorial<br>
-
+``` python
 class Metodos:
     def __init__(self):
         pass
@@ -163,20 +163,20 @@ class Metodos:
             return "el numero que mas se repite es el "+str(clave)+" con "+str(mayor)+" repeticiones"
         return "el numero que menos se repite es el "+str(clave2)+" con "+str(menor)+" repeticiones"
 
-
+```
 6) Probar las funciones incorporadas en la clase del punto 5
-
+``` python
     m = Metodos()
     m.esPrimo(7)
     listado = [1,8,2,5,4,8,10,7]
     print(m.encontrarMayorRepetido(listado))
     m.conversion_grados(10, 'celsius', 'kelvin')
     m.factorial(6)
-
+```
 
 
 7) Es necesario que la clase creada en el punto 5 contenga una lista, sobre la cual se aplquen las funciones incorporadas
-
+``` python
     class Metodos:
     def __init__(self,lista):
         self.lista = lista
@@ -278,9 +278,9 @@ m.lista_Conversion_grados('celsius','farenheit')
 m.lista_esPrimo()
 m.lista_Moda()
 m.lista_Factorial()
-
+``` 
 8) Crear un archivo .py aparte y ubicar allí la clase generada en el punto anterior. Luego realizar la importación del módulo y probar alguna de sus funciones
-
+``` python
     from Metodos import *
     
     m2 = Metodos([1,1,2,3,5,6,8,8])
@@ -288,3 +288,4 @@ m.lista_Factorial()
     m2.lista_esPrimo()
     m2.lista_Moda()
     m2.lista_Factorial()
+```
